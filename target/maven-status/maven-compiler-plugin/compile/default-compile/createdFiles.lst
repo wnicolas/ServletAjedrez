@@ -1,0 +1,13 @@
+com\mycompany\logica\figuras\Alfil.class
+com\mycompany\logica\modelo\Modelo.class
+com\mycompany\logica\figuras\FiguraVacia.class
+com\mycompany\logica\figuras\Figura.class
+com\mycompany\prueba\resources\JavaEE8Resource.class
+com\mycompany\logica\figuras\Peon.class
+com\mycompany\logica\figuras\Dama.class
+com\mycompany\logica\controlador\ControladorMovimientos.class
+com\mycompany\logica\figuras\Torre.class
+com\mycompany\servlet\MiPrimerServlet.class
+com\mycompany\prueba\JAXRSConfiguration.class
+com\mycompany\logica\figuras\Rey.class
+com\mycompany\logica\figuras\Caballo.class
