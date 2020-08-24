@@ -30,13 +30,6 @@ public class MiPrimerServlet extends HttpServlet {
         //modelo.mostrarTablero();
     }
 
-    public boolean prueba(int a) {
-        if (a == 3) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

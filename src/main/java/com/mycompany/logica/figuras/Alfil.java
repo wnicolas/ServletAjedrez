@@ -46,7 +46,7 @@ public class Alfil extends Figura {
                                 
                                 entro = true;
                                 break;
-                            } else if ((posIniX - 1 == posFinalX) && (posIniY - 1 == posFinalY) &&(modelo.getTablero()[posIniX-1][posInicialY-1].getColor().equals("blanca"))){
+                            } else if ((posIniX - 1 == posFinalX) && (posIniY - 1 == posFinalY) &&(modelo.getTablero()[posIniX-1][posIniY-1].getColor().equals("blanca"))){
                                 modelo.getTablero()[posIniX-1][posIniY-1] = modelo.getTablero()[posInicialX][posInicialY];
                                 modelo.getTablero()[posInicialX][posInicialY] = new FiguraVacia("vacia");
                                 entro = true;
@@ -76,7 +76,7 @@ public class Alfil extends Figura {
                                 modelo.getTablero()[posInicialX][posInicialY] = new FiguraVacia("vacia");                               
                                 entro = true;
                                 break;
-                            } else if ((posIniX - 1 == posFinalX) && (posIniY + 1 == posFinalY) &&(modelo.getTablero()[posIniX-1][posInicialY+1].getColor().equals("blanca"))){
+                            } else if ((posIniX - 1 == posFinalX) && (posIniY + 1 == posFinalY) &&(modelo.getTablero()[posIniX-1][posIniY+1].getColor().equals("blanca"))){
                                 
                                 modelo.getTablero()[posIniX-1][posIniY+1] = modelo.getTablero()[posInicialX][posInicialY];
                                 modelo.getTablero()[posInicialX][posInicialY] = new FiguraVacia("vacia");
@@ -106,7 +106,7 @@ public class Alfil extends Figura {
                                 
                                 entro = true;
                                 break;
-                            } else if ((posIniX + 1 == posFinalX) && (posIniY - 1 == posFinalY) &&(modelo.getTablero()[posIniX+1][posInicialY-1].getColor().equals("blanca"))){
+                            } else if ((posIniX + 1 == posFinalX) && (posIniY - 1 == posFinalY) &&(modelo.getTablero()[posIniX+1][posIniY-1].getColor().equals("blanca"))){
                                 modelo.getTablero()[posIniX+1][posIniY-1] = modelo.getTablero()[posInicialX][posInicialY];
                                 modelo.getTablero()[posInicialX][posInicialY] = new FiguraVacia("vacia");
                                 entro = true;
@@ -136,7 +136,7 @@ public class Alfil extends Figura {
                                 
                                 entro = true;
                                 break;
-                            } else if ((posIniX + 1 == posFinalX) && (posIniY + 1 == posFinalY) &&(modelo.getTablero()[posIniX+1][posInicialY+1].getColor().equals("blanca"))){
+                            } else if ((posIniX + 1 == posFinalX) && (posIniY + 1 == posFinalY) &&(modelo.getTablero()[posIniX+1][posIniY+1].getColor().equals("blanca"))){
                                 modelo.getTablero()[posIniX+1][posIniY+1] = modelo.getTablero()[posInicialX][posInicialY];
                                 modelo.getTablero()[posInicialX][posInicialY] = new FiguraVacia("vacia");
                                 entro = true;
@@ -174,7 +174,7 @@ public class Alfil extends Figura {
                                 
                                 entro = true;
                                 break;
-                            } else if ((posIniX - 1 == posFinalX) && (posIniY - 1 == posFinalY) &&(modelo.getTablero()[posIniX-1][posInicialY-1].getColor().equals("negra"))){
+                            } else if ((posIniX - 1 == posFinalX) && (posIniY - 1 == posFinalY) &&(modelo.getTablero()[posIniX-1][posIniY-1].getColor().equals("negra"))){
                                 modelo.getTablero()[posIniX-1][posIniY-1] = modelo.getTablero()[posInicialX][posInicialY];
                                 modelo.getTablero()[posInicialX][posInicialY] = new FiguraVacia("vacia");
                                 entro = true;
@@ -204,7 +204,7 @@ public class Alfil extends Figura {
                                 modelo.getTablero()[posInicialX][posInicialY] = new FiguraVacia("vacia");                               
                                 entro = true;
                                 break;
-                            } else if ((posIniX - 1 == posFinalX) && (posIniY + 1 == posFinalY) &&(modelo.getTablero()[posIniX-1][posInicialY+1].getColor().equals("negra"))){
+                            } else if ((posIniX - 1 == posFinalX) && (posIniY + 1 == posFinalY) &&(modelo.getTablero()[posIniX-1][posIniY+1].getColor().equals("negra"))){
                                 
                                 modelo.getTablero()[posIniX-1][posIniY+1] = modelo.getTablero()[posInicialX][posInicialY];
                                 modelo.getTablero()[posInicialX][posInicialY] = new FiguraVacia("vacia");
@@ -234,7 +234,7 @@ public class Alfil extends Figura {
                                 modelo.getTablero()[posInicialX][posInicialY] = new FiguraVacia("vacia"); 
                                 entro = true;
                                 break;
-                            } else if ((posIniX + 1 == posFinalX) && (posIniY - 1 == posFinalY) &&(modelo.getTablero()[posIniX+1][posInicialY-1].getColor().equals("negra"))){
+                            } else if ((posIniX + 1 == posFinalX) && (posIniY - 1 == posFinalY) &&(modelo.getTablero()[posIniX+1][posIniY-1].getColor().equals("negra"))){
                                 modelo.getTablero()[posIniX+1][posIniY-1] = modelo.getTablero()[posInicialX][posInicialY];
                                 modelo.getTablero()[posInicialX][posInicialY] = new FiguraVacia("vacia");
                                 entro = true;
@@ -265,7 +265,7 @@ public class Alfil extends Figura {
                                 
                                 entro = true;
                                 break;
-                            } else if ((posIniX + 1 == posFinalX) && (posIniY + 1 == posFinalY) &&(modelo.getTablero()[posIniX+1][posInicialY+1].getColor().equals("negra"))){
+                            } else if ((posIniX + 1 == posFinalX) && (posIniY + 1 == posFinalY) &&(modelo.getTablero()[posIniX+1][posIniY+1].getColor().equals("negra"))){
                                 modelo.getTablero()[posIniX+1][posIniY+1] = modelo.getTablero()[posInicialX][posInicialY];
                                 modelo.getTablero()[posInicialX][posInicialY] = new FiguraVacia("vacia");
                                 entro = true;

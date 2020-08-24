@@ -132,7 +132,7 @@ public class Dama extends Figura {
 
                         entro = true;
                         break;
-                    } else if ((posIniX - 1 == posFinalI) && (posIniY - 1 == posFinalJ) && (modelo.getTablero()[posIniX - 1][posInicialJ - 1].getColor().equals("blanca"))) {
+                    } else if ((posIniX - 1 == posFinalI) && (posIniY - 1 == posFinalJ) && (modelo.getTablero()[posIniX - 1][posIniY - 1].getColor().equals("blanca"))) {
                         modelo.getTablero()[posIniX - 1][posIniY - 1] = modelo.getTablero()[posInicialI][posInicialJ];
                         modelo.getTablero()[posInicialI][posInicialJ] = new FiguraVacia("vacia");
                         entro = true;
@@ -160,7 +160,7 @@ public class Dama extends Figura {
                         modelo.getTablero()[posInicialI][posInicialJ] = new FiguraVacia("vacia");
                         entro = true;
                         break;
-                    } else if ((posIniX - 1 == posFinalI) && (posIniY + 1 == posFinalJ) && (modelo.getTablero()[posIniX - 1][posInicialJ + 1].getColor().equals("blanca"))) {
+                    } else if ((posIniX - 1 == posFinalI) && (posIniY + 1 == posFinalJ) && (modelo.getTablero()[posIniX - 1][posIniY + 1].getColor().equals("blanca"))) {
 
                         modelo.getTablero()[posIniX - 1][posIniY + 1] = modelo.getTablero()[posInicialI][posInicialJ];
                         modelo.getTablero()[posInicialI][posInicialJ] = new FiguraVacia("vacia");
@@ -188,7 +188,7 @@ public class Dama extends Figura {
 
                         entro = true;
                         break;
-                    } else if ((posIniX + 1 == posFinalI) && (posIniY - 1 == posFinalJ) && (modelo.getTablero()[posIniX + 1][posInicialJ - 1].getColor().equals("blanca"))) {
+                    } else if ((posIniX + 1 == posFinalI) && (posIniY - 1 == posFinalJ) && (modelo.getTablero()[posIniX + 1][posIniY - 1].getColor().equals("blanca"))) {
                         modelo.getTablero()[posIniX + 1][posIniY - 1] = modelo.getTablero()[posInicialI][posInicialJ];
                         modelo.getTablero()[posInicialI][posInicialJ] = new FiguraVacia("vacia");
                         entro = true;
@@ -216,7 +216,7 @@ public class Dama extends Figura {
 
                         entro = true;
                         break;
-                    } else if ((posIniX + 1 == posFinalI) && (posIniY + 1 == posFinalJ) && (modelo.getTablero()[posIniX + 1][posInicialJ + 1].getColor().equals("blanca"))) {
+                    } else if ((posIniX + 1 == posFinalI) && (posIniY + 1 == posFinalJ) && (modelo.getTablero()[posIniX + 1][posIniY + 1].getColor().equals("blanca"))) {
                         modelo.getTablero()[posIniX + 1][posIniY + 1] = modelo.getTablero()[posInicialI][posInicialJ];
                         modelo.getTablero()[posInicialI][posInicialJ] = new FiguraVacia("vacia");
                         entro = true;
@@ -244,7 +244,7 @@ public class Dama extends Figura {
 
                         entro = true;
                         break;
-                    } else if ((posIniX - 1 == posFinalI) && (posIniY - 1 == posFinalJ) && (modelo.getTablero()[posIniX - 1][posInicialJ - 1].getColor().equals("blanca"))) {
+                    } else if ((posIniX - 1 == posFinalI) && (posIniY - 1 == posFinalJ) && (modelo.getTablero()[posIniX - 1][posIniY - 1].getColor().equals("blanca"))) {
                         modelo.getTablero()[posIniX - 1][posIniY - 1] = modelo.getTablero()[posInicialI][posInicialJ];
                         modelo.getTablero()[posInicialI][posInicialJ] = new FiguraVacia("vacia");
                         entro = true;
@@ -272,7 +272,7 @@ public class Dama extends Figura {
                         modelo.getTablero()[posInicialI][posInicialJ] = new FiguraVacia("vacia");
                         entro = true;
                         break;
-                    } else if ((posIniX - 1 == posFinalI) && (posIniY + 1 == posFinalJ) && (modelo.getTablero()[posIniX - 1][posInicialJ + 1].getColor().equals("blanca"))) {
+                    } else if ((posIniX - 1 == posFinalI) && (posIniY + 1 == posFinalJ) && (modelo.getTablero()[posIniX - 1][posIniY + 1].getColor().equals("blanca"))) {
 
                         modelo.getTablero()[posIniX - 1][posIniY + 1] = modelo.getTablero()[posInicialI][posInicialJ];
                         modelo.getTablero()[posInicialI][posInicialJ] = new FiguraVacia("vacia");
@@ -300,7 +300,7 @@ public class Dama extends Figura {
 
                         entro = true;
                         break;
-                    } else if ((posIniX + 1 == posFinalI) && (posIniY - 1 == posFinalJ) && (modelo.getTablero()[posIniX + 1][posInicialJ - 1].getColor().equals("blanca"))) {
+                    } else if ((posIniX + 1 == posFinalI) && (posIniY - 1 == posFinalJ) && (modelo.getTablero()[posIniX + 1][posIniY - 1].getColor().equals("blanca"))) {
                         modelo.getTablero()[posIniX + 1][posIniY - 1] = modelo.getTablero()[posInicialI][posInicialJ];
                         modelo.getTablero()[posInicialI][posInicialJ] = new FiguraVacia("vacia");
                         entro = true;
@@ -328,7 +328,7 @@ public class Dama extends Figura {
 
                         entro = true;
                         break;
-                    } else if ((posIniX + 1 == posFinalI) && (posIniY + 1 == posFinalJ) && (modelo.getTablero()[posIniX + 1][posInicialJ + 1].getColor().equals("blanca"))) {
+                    } else if ((posIniX + 1 == posFinalI) && (posIniY + 1 == posFinalJ) && (modelo.getTablero()[posIniX + 1][posIniY + 1].getColor().equals("blanca"))) {
                         modelo.getTablero()[posIniX + 1][posIniY + 1] = modelo.getTablero()[posInicialI][posInicialJ];
                         modelo.getTablero()[posInicialI][posInicialJ] = new FiguraVacia("vacia");
                         entro = true;
@@ -454,7 +454,7 @@ public class Dama extends Figura {
 
                         entro = true;
                         break;
-                    } else if ((posIniX - 1 == posFinalI) && (posIniY - 1 == posFinalJ) && (modelo.getTablero()[posIniX - 1][posInicialJ - 1].getColor().equals("negra"))) {
+                    } else if ((posIniX - 1 == posFinalI) && (posIniY - 1 == posFinalJ) && (modelo.getTablero()[posIniX - 1][posIniY - 1].getColor().equals("negra"))) {
                         modelo.getTablero()[posIniX - 1][posIniY - 1] = modelo.getTablero()[posInicialI][posInicialJ];
                         modelo.getTablero()[posInicialI][posInicialJ] = new FiguraVacia("vacia");
                         entro = true;
@@ -482,7 +482,7 @@ public class Dama extends Figura {
                         modelo.getTablero()[posInicialI][posInicialJ] = new FiguraVacia("vacia");
                         entro = true;
                         break;
-                    } else if ((posIniX - 1 == posFinalI) && (posIniY + 1 == posFinalJ) && (modelo.getTablero()[posIniX - 1][posInicialJ + 1].getColor().equals("negra"))) {
+                    } else if ((posIniX - 1 == posFinalI) && (posIniY + 1 == posFinalJ) && (modelo.getTablero()[posIniX - 1][posIniY + 1].getColor().equals("negra"))) {
 
                         modelo.getTablero()[posIniX - 1][posIniY + 1] = modelo.getTablero()[posInicialI][posInicialJ];
                         modelo.getTablero()[posInicialI][posInicialJ] = new FiguraVacia("vacia");
@@ -510,7 +510,7 @@ public class Dama extends Figura {
                         modelo.getTablero()[posInicialI][posInicialJ] = new FiguraVacia("vacia");
                         entro = true;
                         break;
-                    } else if ((posIniX + 1 == posFinalI) && (posIniY - 1 == posFinalJ) && (modelo.getTablero()[posIniX + 1][posInicialJ - 1].getColor().equals("negra"))) {
+                    } else if ((posIniX + 1 == posFinalI) && (posIniY - 1 == posFinalJ) && (modelo.getTablero()[posIniX + 1][posIniY - 1].getColor().equals("negra"))) {
                         modelo.getTablero()[posIniX + 1][posIniY - 1] = modelo.getTablero()[posInicialI][posInicialJ];
                         modelo.getTablero()[posInicialI][posInicialJ] = new FiguraVacia("vacia");
                         entro = true;
@@ -539,7 +539,7 @@ public class Dama extends Figura {
 
                         entro = true;
                         break;
-                    } else if ((posIniX + 1 == posFinalI) && (posIniY + 1 == posFinalJ) && (modelo.getTablero()[posIniX + 1][posInicialJ + 1].getColor().equals("negra"))) {
+                    } else if ((posIniX + 1 == posFinalI) && (posIniY + 1 == posFinalJ) && (modelo.getTablero()[posIniX + 1][posIniY + 1].getColor().equals("negra"))) {
                         modelo.getTablero()[posIniX + 1][posIniY + 1] = modelo.getTablero()[posInicialI][posInicialJ];
                         modelo.getTablero()[posInicialI][posInicialJ] = new FiguraVacia("vacia");
                         entro = true;
