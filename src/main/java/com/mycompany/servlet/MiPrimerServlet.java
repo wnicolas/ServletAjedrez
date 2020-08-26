@@ -43,23 +43,16 @@ public class MiPrimerServlet extends HttpServlet {
             int posInicialJ = Integer.parseInt(parts[1]);
             int posFinalI = Integer.parseInt(parts[2]);
             int posFinalJ = Integer.parseInt(parts[3]);
-            
-            
-            
 
-            if (controlador.mover(posInicialI, posInicialJ, posFinalI, posFinalJ)) {
-                //if (comando.equalsIgnoreCase("true")) {
+            if (controlador.mover(posInicialI, posInicialJ, posFinalI, posFinalJ)) {                
                 out.println("{");
                 out.println("\"comando\":\"" + "true" + "\"");
                 out.println("}");
-            } else if (!controlador.mover(posInicialI, posInicialJ, posFinalI, posFinalJ)) {
-                //} else if(comando.equalsIgnoreCase("false")){
+            } else if (!controlador.mover(posInicialI, posInicialJ, posFinalI, posFinalJ)) {                
                 out.println("{");
                 out.println("\"comando\":\"" + "false" + "\"");
                 out.println("}");
             }
-            //JOptionPane.showMessageDialog(null, "Hola mundo");
-
         }
     }
 

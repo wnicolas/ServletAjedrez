@@ -29,7 +29,6 @@ public class Modelo {
             initAlfiles();
             initDamas();
             initReyes();
-            //tablero[6][0] = new FiguraVacia("vacia");
         }
     }
 

@@ -14,23 +14,7 @@ public class ControladorMovimientos {
 
     }
 
-    //Métodos usados por la vista hecha en java
-  /*  public void setCoordenadasIniciales(int a, int b) {
-        posinii = a;
-        posinij = b;
-    }
-
-    public void setCoordenadasFinales(int c, int d) {
-        posfini = c;
-        posfinj = d;
-        mover(posinii, posinij, posfini, posfinj);
-        System.out.println("====================");
-        System.out.println("Siguiente movimiento");
-        System.out.println("====================");
-        modelo.mostrarTablero();
-    }
-*/
-//Método de que hace toda la magia de los mvimeintos
+//Método de que hace toda la magia de los movimientos
 
     public boolean mover(int posInicialI, int posInicialJ, int posFinalI, int posFinalJ) {
         if (turnoBlancas && modelo.getTablero()[posInicialI][posInicialJ].getColor().equals("blanca")) {
