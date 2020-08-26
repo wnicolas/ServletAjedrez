@@ -18,7 +18,7 @@ public class Modelo {
     }
 
 //****************************************************************
-int posi;
+    int posi;
     int posj;
     
     public boolean verificaJaqueNegra() {
@@ -129,14 +129,14 @@ int posi;
             }
         }
 
-        if ((posi - 1) >= 0 && (posj - 1) >= 0) {
-            if (tablero[posi - 1][posj - 1].getTipo().equals("P")) {
+        if ((posi + 1) <8 && (posj + 1) < 8) {
+            if (tablero[posi + 1][posj + 1].getTipo().equals("P")) {
                 return true;
             }
         }
 
-        if ((posi - 1) >= 0 && (posj + 1) < 8) {
-            if (tablero[posi - 1][posj + 1].getTipo().equals("P")) {
+        if ((posi + 1) < 8 && (posj - 1) >= 0) {
+            if (tablero[posi + 1][posj - 1].getTipo().equals("P")) {
                 return true;
             }
         }
