@@ -27,7 +27,7 @@ public class MiPrimerServlet extends HttpServlet {
     public MiPrimerServlet() {
         modelo = new Modelo();
         controlador = new ControladorMovimientos(modelo);
-        //modelo.mostrarTablero();
+
     }
 
 
@@ -44,13 +44,34 @@ public class MiPrimerServlet extends HttpServlet {
             int posFinalI = Integer.parseInt(parts[2]);
             int posFinalJ = Integer.parseInt(parts[3]);
 
-            if (controlador.mover(posInicialI, posInicialJ, posFinalI, posFinalJ)) {                
+            if (controlador.mover(posInicialI, posInicialJ, posFinalI, posFinalJ)) {  
+                
                 out.println("{");
-                out.println("\"comando\":\"" + "true" + "\"");
+                out.println("\"comando\":\"" + "true" + "\",");
+                if(modelo.verificaJaqueBlanca()){
+                  out.println("\"jaqueBlanca\":\"" + "true" + "\",");  
+                }else{
+                   out.println("\"jaqueBlanca\":\"" + "false" + "\",");
+                }
+                if(modelo.verificaJaqueNegra()){
+                  out.println("\"jaqueNegra\":\"" + "true" + "\"");  
+                }else{
+                   out.println("\"jaqueNegra\":\"" + "false" + "\"");
+                }
                 out.println("}");
             } else if (!controlador.mover(posInicialI, posInicialJ, posFinalI, posFinalJ)) {                
                 out.println("{");
-                out.println("\"comando\":\"" + "false" + "\"");
+                out.println("\"comando\":\"" + "false" + "\",");
+                if(modelo.verificaJaqueBlanca()){
+                  out.println("\"jaqueBlanca\":\"" + "true" + "\",");  
+                }else{
+                   out.println("\"jaqueBlanca\":\"" + "false" + "\",");
+                }
+                if(modelo.verificaJaqueNegra()){
+                  out.println("\"jaqueNegra\":\"" + "true" + "\"");  
+                }else{
+                   out.println("\"jaqueNegra\":\"" + "false" + "\"");
+                }
                 out.println("}");
             }
         }

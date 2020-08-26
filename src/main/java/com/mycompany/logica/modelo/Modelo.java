@@ -17,6 +17,449 @@ public class Modelo {
         init();
     }
 
+//****************************************************************
+int posi;
+    int posj;
+    
+    public boolean verificaJaqueNegra() {
+
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (tablero[i][j].getTipo().equals("r")) {
+                    posi = i;
+                    posj = j;
+                }
+            }
+        }
+
+        for (int i = posj-1; i >=0; i--) {
+            if(tablero[posi][i].getColor().equals("negra")){
+                
+                break;
+            }
+            if (tablero[posi][i].getTipo().equals("T") || tablero[posi][i].getTipo().equals("D")) {
+                return true;
+            }
+        }
+        for (int i = posj + 1; i < 8; i++) {
+            if(tablero[posi][i].getColor().equals("negra")){
+                
+                break;
+            }
+            if (tablero[posi][i].getTipo().equals("T") || tablero[posi][i].getTipo().equals("D")) {
+                return true;
+            }
+        }
+        for (int i = posi-1; i >=0; i--) {
+            if(tablero[i][posj].getColor().equals("negra")){
+                
+                break;
+            }
+            if (tablero[i][posj].getTipo().equals("T") || tablero[i][posj].getTipo().equals("D")) {
+                return true;
+            }
+        }
+        for (int i = posi + 1; i < 8; i++) {
+            if(tablero[i][posj].getColor().equals("negra")){
+                
+                break;
+            }
+            if (tablero[i][posj].getTipo().equals("T") || tablero[i][posj].getTipo().equals("D")) {
+                return true;
+            }
+        }
+
+        int auxi = posi-1;
+        int auxj = posj+1;
+
+        while (auxi >= 0 && auxj < 8) {
+            if(tablero[auxi][auxj].getColor().equals("negra")){      
+                break;
+            }
+            if (tablero[auxi][auxj].getTipo().equals("A") || tablero[auxi][auxj].getTipo().equals("D")) {
+                return true;
+            } else {
+                auxi = auxi - 1;
+                auxj = auxj + 1;
+            }
+        }
+
+        auxi = posi-1;
+        auxj = posj-1;
+
+        while (auxi >= 0 && auxj >= 0) {
+            if(tablero[auxi][auxj].getColor().equals("negra")){      
+                break;
+            }
+            if (tablero[auxi][auxj].getTipo().equals("A") || tablero[auxi][auxj].getTipo().equals("D")) {
+                return true;
+            } else {
+                auxi = auxi - 1;
+                auxj = auxj - 1;
+            }
+        }
+
+        auxi = posi+1;
+        auxj = posj-1;
+
+        while (auxi < 8 && auxj >= 0) {
+            if(tablero[auxi][auxj].getColor().equals("negra")){      
+                break;
+            }
+            if (tablero[auxi][auxj].getTipo().equals("A") || tablero[auxi][auxj].getTipo().equals("D")) {
+                return true;
+            } else {
+                auxi = auxi + 1;
+                auxj = auxj - 1;
+            }
+        }
+
+        auxi = posi+1;
+        auxj = posj+1;
+
+        while (auxi < 8 && auxj < 8) {
+            if(tablero[auxi][auxj].getColor().equals("negra")){      
+                break;
+            }
+            if (tablero[auxi][auxj].getTipo().equals("A") || tablero[auxi][auxj].getTipo().equals("D")) {
+                return true;
+            } else {
+                auxi = auxi + 1;
+                auxj = auxj + 1;
+            }
+        }
+
+        if ((posi - 1) >= 0 && (posj - 1) >= 0) {
+            if (tablero[posi - 1][posj - 1].getTipo().equals("P")) {
+                return true;
+            }
+        }
+
+        if ((posi - 1) >= 0 && (posj + 1) < 8) {
+            if (tablero[posi - 1][posj + 1].getTipo().equals("P")) {
+                return true;
+            }
+        }
+
+        if ((posi - 2) >= 0 && (posj - 1) >= 0) {
+            if (tablero[posi - 2][posj - 1].getTipo().equals("C")) {
+                return true;
+            }
+        }
+
+        if ((posi - 1) >= 0 && (posj - 2) >= 0) {
+            if (tablero[posi - 1][posj - 2].getTipo().equals("C")) {
+                return true;
+            }
+        }
+
+        if ((posi + 1) < 8 && (posj - 2) >= 0) {
+            if (tablero[posi + 1][posj - 2].getTipo().equals("C")) {
+                return true;
+            }
+        }
+
+        if ((posi + 2) < 8 && (posj - 1) >= 0) {
+            if (tablero[posi + 2][posj - 1].getTipo().equals("C")) {
+                return true;
+            }
+        }
+
+        if ((posi - 2) >= 0 && (posj + 1) < 8) {
+            if (tablero[posi - 2][posj + 1].getTipo().equals("C")) {
+                return true;
+            }
+        }
+
+        if ((posi - 1) >= 0 && (posj + 2) < 8) {
+            if (tablero[posi - 1][posj + 2].getTipo().equals("C")) {
+                return true;
+            }
+        }
+
+        if ((posi + 1) < 8 && (posj + 2) < 8) {
+            if (tablero[posi + 1][posj + 2].getTipo().equals("C")) {
+                return true;
+            }
+        }
+
+        if ((posi + 2) < 8 && (posj + 1) < 8) {
+            if (tablero[posi + 2][posj + 1].getTipo().equals("C")) {
+                return true;
+            }
+        }
+
+        if ((posi - 1) >= 0 && (posj + 1) < 8) {
+            if (tablero[posi - 1][posj + 1].getTipo().equals("R")) {
+                return true;
+            }
+        }
+
+        if ((posi + 1) < 8 && (posj + 1) < 8) {
+            if (tablero[posi + 1][posj + 1].getTipo().equals("R")) {
+                return true;
+            }
+        }
+
+        if ((posi + 1) < 8 && (posj - 1) >= 0) {
+            if (tablero[posi + 1][posj - 1].getTipo().equals("R")) {
+                return true;
+            }
+        }
+
+        if ((posi - 1) >= 0 && (posj - 1) >= 0) {
+            if (tablero[posi - 1][posj - 1].getTipo().equals("R")) {
+                return true;
+            }
+        }
+
+        if (posi - 1 >= 0) {
+            if (tablero[posi - 1][posj].getTipo().equals("R")) {
+                return true;
+            }
+        }
+        
+        if (posi + 1 < 8) {
+            if (tablero[posi + 1][posj].getTipo().equals("R")) {
+                return true;
+            }
+        }
+        
+        if (posj - 1 >= 0) {
+            if (tablero[posi][posj-1].getTipo().equals("R")) {
+                return true;
+            }
+        }
+        
+        if (posj + 1 < 8) {
+            if (tablero[posi][posj+1].getTipo().equals("R")) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public boolean verificaJaqueBlanca() {
+
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (tablero[i][j].getTipo().equals("R")) {
+                    posi = i;
+                    posj = j;
+                }
+            }
+        }
+
+        for (int i = posj-1; i >=0; i--) {
+            if(tablero[posi][i].getColor().equals("blanca")){
+                
+                break;
+            }
+            if (tablero[posi][i].getTipo().equals("t") || tablero[posi][i].getTipo().equals("d")) {
+                return true;
+            }
+        }
+        for (int i = posj + 1; i < 8; i++) {
+            if(tablero[posi][i].getColor().equals("blanca")){
+                
+                break;
+            }
+            if (tablero[posi][i].getTipo().equals("t") || tablero[posi][i].getTipo().equals("d")) {
+                return true;
+            }
+        }
+        for (int i = posi-1; i >=0; i--) {
+            if(tablero[i][posj].getColor().equals("blanca")){
+                
+                break;
+            }
+            if (tablero[i][posj].getTipo().equals("t") || tablero[i][posj].getTipo().equals("d")) {
+                return true;
+            }
+        }
+        for (int i = posi + 1; i < 8; i++) {
+            if(tablero[i][posj].getColor().equals("blanca")){
+                
+                break;
+            }
+            if (tablero[i][posj].getTipo().equals("t") || tablero[i][posj].getTipo().equals("d")) {
+                return true;
+            }
+        }
+
+        int auxi = posi-1;
+        int auxj = posj+1;
+
+        while (auxi >= 0 && auxj < 8) {
+            if(tablero[auxi][auxj].getColor().equals("blanca")){      
+                break;
+            }
+            if (tablero[auxi][auxj].getTipo().equals("a") || tablero[auxi][auxj].getTipo().equals("d")) {
+                return true;
+            } else {
+                auxi = auxi - 1;
+                auxj = auxj + 1;
+            }
+        }
+
+        auxi = posi-1;
+        auxj = posj-1;
+
+        while (auxi >= 0 && auxj >= 0) {
+            if(tablero[auxi][auxj].getColor().equals("blanca")){      
+                break;
+            }
+            if (tablero[auxi][auxj].getTipo().equals("a") || tablero[auxi][auxj].getTipo().equals("d")) {
+                return true;
+            } else {
+                auxi = auxi - 1;
+                auxj = auxj - 1;
+            }
+        }
+
+        auxi = posi+1;
+        auxj = posj-1;
+
+        while (auxi < 8 && auxj >= 0) {
+            if(tablero[auxi][auxj].getColor().equals("blanca")){      
+                break;
+            }
+            if (tablero[auxi][auxj].getTipo().equals("a") || tablero[auxi][auxj].getTipo().equals("d")) {
+                return true;
+            } else {
+                auxi = auxi + 1;
+                auxj = auxj - 1;
+            }
+        }
+
+        auxi = posi+1;
+        auxj = posj+1;
+
+        while (auxi < 8 && auxj < 8) {
+            if(tablero[auxi][auxj].getColor().equals("blanca")){      
+                break;
+            }
+            if (tablero[auxi][auxj].getTipo().equals("a") || tablero[auxi][auxj].getTipo().equals("d")) {
+                return true;
+            } else {
+                auxi = auxi + 1;
+                auxj = auxj + 1;
+            }
+        }
+
+        if ((posi - 1) >= 0 && (posj - 1) >= 0) {
+            if (tablero[posi - 1][posj - 1].getTipo().equals("p")) {
+                return true;
+            }
+        }
+
+        if ((posi - 1) >= 0 && (posj + 1) < 8) {
+            if (tablero[posi - 1][posj + 1].getTipo().equals("p")) {
+                return true;
+            }
+        }
+
+        if ((posi - 2) >= 0 && (posj - 1) >= 0) {
+            if (tablero[posi - 2][posj - 1].getTipo().equals("c")) {
+                return true;
+            }
+        }
+
+        if ((posi - 1) >= 0 && (posj - 2) >= 0) {
+            if (tablero[posi - 1][posj - 2].getTipo().equals("c")) {
+                return true;
+            }
+        }
+
+        if ((posi + 1) < 8 && (posj - 2) >= 0) {
+            if (tablero[posi + 1][posj - 2].getTipo().equals("c")) {
+                return true;
+            }
+        }
+
+        if ((posi + 2) < 8 && (posj - 1) >= 0) {
+            if (tablero[posi + 2][posj - 1].getTipo().equals("c")) {
+                return true;
+            }
+        }
+
+        if ((posi - 2) >= 0 && (posj + 1) < 8) {
+            if (tablero[posi - 2][posj + 1].getTipo().equals("c")) {
+                return true;
+            }
+        }
+
+        if ((posi - 1) >= 0 && (posj + 2) < 8) {
+            if (tablero[posi - 1][posj + 2].getTipo().equals("c")) {
+                return true;
+            }
+        }
+
+        if ((posi + 1) < 8 && (posj + 2) < 8) {
+            if (tablero[posi + 1][posj + 2].getTipo().equals("c")) {
+                return true;
+            }
+        }
+
+        if ((posi + 2) < 8 && (posj + 1) < 8) {
+            if (tablero[posi + 2][posj + 1].getTipo().equals("c")) {
+                return true;
+            }
+        }
+
+        if ((posi - 1) >= 0 && (posj + 1) < 8) {
+            if (tablero[posi - 1][posj + 1].getTipo().equals("r")) {
+                return true;
+            }
+        }
+
+        if ((posi + 1) < 8 && (posj + 1) < 8) {
+            if (tablero[posi + 1][posj + 1].getTipo().equals("r")) {
+                return true;
+            }
+        }
+
+        if ((posi + 1) < 8 && (posj - 1) >= 0) {
+            if (tablero[posi + 1][posj - 1].getTipo().equals("r")) {
+                return true;
+            }
+        }
+
+        if ((posi - 1) >= 0 && (posj - 1) >= 0) {
+            if (tablero[posi - 1][posj - 1].getTipo().equals("r")) {
+                return true;
+            }
+        }
+
+        if (posi - 1 >= 0) {
+            if (tablero[posi - 1][posj].getTipo().equals("r")) {
+                return true;
+            }
+        }
+        
+        if (posi + 1 < 8) {
+            if (tablero[posi + 1][posj].getTipo().equals("r")) {
+                return true;
+            }
+        }
+        
+        if (posj - 1 >= 0) {
+            if (tablero[posi][posj-1].getTipo().equals("r")) {
+                return true;
+            }
+        }
+        
+        if (posj + 1 < 8) {
+            if (tablero[posi][posj+1].getTipo().equals("r")) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+//****************************************************************
+
     public void init() {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
